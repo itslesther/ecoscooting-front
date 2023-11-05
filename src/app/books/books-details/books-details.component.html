@@ -1,0 +1,29 @@
+<h1 *ngIf="!bookId">New Book</h1>
+<h1 *ngIf="bookId">Edit Book with ID: {{bookId}}</h1>
+
+<form [formGroup]="booksForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="title">Title: </label>
+    <input type="text" id="title" formControlName="title" />
+    <p *ngIf="invalidField('title')" class="input-error">Title is required</p>
+  </div>
+
+  <div>
+    <label for="author">Author: </label>
+    <input type="text" id="author" formControlName="author" />
+    <p *ngIf="invalidField('author')" class="input-error">Author is required</p>
+  </div>
+
+  <div>
+    <label for="publicationDate">Publication Date: </label>
+    <input type="date" id="publicationDate" formControlName="publicationDate" />
+    <p *ngIf="invalidField('publicationDate')" class="input-error">Date is required</p>
+  </div>
+
+  <div class="button-container">
+    <button type="button" class="back-button" [routerLink]="['/books']">
+      Back
+    </button>
+    <button type="submit">Submit</button>
+  </div>
+</form>
