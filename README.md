@@ -19,4 +19,4 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Configuration
 
-By default, the frontend is trying to connect to a Backend instance running locally on port 3000. You can change this behaviour by changing the backendUrl variable in books.service.ts
+By default, the frontend is trying to connect to a Backend instance running locally on port 3000. You can change this behaviour by changing the `backendUrl` variable in books.service.ts
